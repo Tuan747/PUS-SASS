@@ -1,0 +1,49 @@
+header.header
+    .container
+        .row
+            .col-2.col-sm-2.col-md-2.col-lg-1.header-logo
+                a(href="#", title="Sflix") 
+                    img(src="img/logo.png", alt="logo-sflix")
+            label.col-2.col-sm-2.col-md-2.col-lg-1.header-browser.checkbtn(for="check")
+                input#check(type="checkbox")
+                .sidebar__menu
+                    ul.sidebar__menu--list
+                        li.list-item
+                            .list-item__icon
+                                i.fas.fa-columns
+                            a(href="#" title="#{header_title.home}") #{header_title.home}
+                        li.list-item
+                            .list-item__icon
+                                i.fas.fa-play-circle
+                            a(href="#" title="#{header_title.movies}") #{header_title.movies}
+                        li.list-item
+                            .list-item__icon
+                                i.fas.fa-video
+                            a(href="#" title="#{header_title.tv}") #{header_title.tv}
+                        li.list-item
+                            .list-item__icon
+                                i.fas.fa-fire
+                            a(href="#" title="#{header_title.imdb}") #{header_title.imdb}
+                        li.list-item
+                            .list-item__icon
+                                i.fab.fa-android
+                            a(href="#" title="#{header_title.app}") #{header_title.app}
+                        li.list-item__space
+                            h5 #{header_title.genre}
+                            .sidebar__genre
+                                ul.sidebar__genre--list
+                                    each type in typeMovies
+                                        li.list-item--genre.btn.btn-outline-light.d-inline-block.w-40
+                                            a(href="#")= type 
+
+                .header-browser__btn
+                    i.fas.fa-bars
+                    p #{header_title.browser}
+            .col-6.col-sm-6.col-md-6.col-lg-8.header-search
+                .header-search__box
+                    i.fas.fa-search 
+                    input(type="text", placeholder="Enter keywords...")
+            .col-2.col-sm-2.col-md-2.col-lg-2.header-author
+                .header-author__box
+                    i.far.fa-user
+                    p #{header_title.login}

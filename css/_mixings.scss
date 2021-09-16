@@ -1,0 +1,21 @@
+@mixin d-flex($justify, $align, $decorator) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $decorator;
+}
+@mixin border-box($border) {
+    border-radius: $border;
+}
+// responsive
+@mixin responsive($device) {
+    @if $device == mobile {
+        @media (max-width: 740px) {
+            @content;
+        }
+    } @else if $device == tablet {
+        @media (min-width: 741px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+}

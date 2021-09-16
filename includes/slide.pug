@@ -1,0 +1,15 @@
+section.container
+    #carouselExampleControls.carousel.slide.slide-ad(data-ride='carousel')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='img/slide-start.jpg' alt='First slide')
+            .carousel-item
+                img.d-block.w-100(src='img/slide-start.jpg' alt='Second slide')
+            .carousel-item
+                img.d-block.w-100(src='img/slide-start.jpg' alt='Third slide')
+        a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only #{sidebar.pre}
+        a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only #{sidebar.next}
