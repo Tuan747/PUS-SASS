@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Pug/Sass</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-1 header-logo"><a href="#" title="Sflix"> <img src="https://img.sflix.to/xxrz/400x400/100/66/35/66356c25ce98cb12993249e21742b129/66356c25ce98cb12993249e21742b129.png" alt="logo-sflix"></a></div>
+          <label class="col-2 col-sm-2 col-md-2 col-lg-1 header-browser checkbtn" for="check">
+            <input id="check" type="checkbox">
+            <div class="sidebar__menu">
+              <ul class="sidebar__menu--list">
+                <li class="list-item">
+                  <div class="list-item__icon"><i class="fas fa-columns"></i></div><a href="#">Home</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-item__icon"><i class="fas fa-play-circle"></i></div><a href="#">Movies</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-item__icon"><i class="fas fa-video"></i></div><a href="#">TV Shows</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-item__icon"><i class="fas fa-fire"></i></div><a href="#">Top IMDB</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-item__icon"><i class="fab fa-android"></i></div><a href="#">Android App</a>
+                </li>
+                <li class="list-item__space">
+                  <h5>Genre</h5>
+                  <div class="sidebar__genre">
+                    <ul class="sidebar__genre--list">
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Action</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Action &amp; Adventure</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Adventure</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Animation</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Comedy</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Crime</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Documentary</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Drama</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Family</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Fantasy</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">Sci-Fi &amp; Fantasy</a></li>
+                      <li class="list-item--genre btn btn-outline-light d-inline-block w-40"><a href="#">TV Movie </a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header-browser__btn"><i class="fas fa-bars"></i>
+              <p>Browser</p>
+            </div>
+          </label>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-8 header-search">
+            <div class="header-search__box"><i class="fas fa-search"> </i>
+              <input type="text" placeholder="Enter keywords...">
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 header-author">
+            <div class="header-author__box"><i class="far fa-user"></i>
+              <p>Login</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-3 footer-top__item"><a href="#">Android App</a></div>
+          <div class="col-3 footer-top__item"><a href="#">Terms of service</a></div>
+          <div class="col-3 footer-top__item"><a href="#">Contact</a></div>
+          <div class="col-3 footer-top__item"><a href="#">Sitemap</a></div>
+        </div>
+        <div class="row footer-middle">
+          <div class="col-12">
+            <p>SFlix is a Free Movies streaming site with zero ads. We let you watch movies online without having to register or paying, with over 10000 movies and TV-Series. You can also Download full movies from MoviesCloud and watch it later if you want.</p>
+          </div>
+        </div>
+        <div class="row footer-middle">
+          <div class="col-12"> 
+            <p>© SFlix</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
