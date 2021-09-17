@@ -2,31 +2,15 @@ section.trending
     .container
         .row.trending-type
             .col-3.col-sm-3.col-md-3.col-lg-2.trending-type__title
-                h2 #{trending.title}
+                h2 #{trending_title}
             .col-3.col-sm-3.col-md-3.col-lg-2.trending-type__movies
                 i.fas.fa-play-circle
-                h6 #{trending.typeMovies}
+                h6 #{trending_typeMovies}
             .col-6.col-sm-6.col-md-6.col-lg-8.trending-type__tv
                 i.fas.fa-list-ul
-                h6 #{trending.typeTv}
+                h6 #{trending_typeTv}
         .row.trending-movies
             each movie in listMovies
-                .col-6.col-sm-4.col-md-3.col-lg-2 
-                    .trending-movies__item
-                        .movies__item--picture
-                            a(href="#")
-                                img(src= movie.image, alt= movie.name) 
-                        .movies__item--detail
-                            .detail-infor
-                                span.detail-infor__item
-                                    i.fas.fa-star
-                                    span= movie.rating
-                                span.detail-infor__item
-                                    strong= movie.quality
-                                span.detail-infor__item= movie.year
-                            h3.detail-name= movie.name
-                            .detail-btn
-                                a.btn.btn-secondary.btn-block(href="#")
-                                    i.fas.fa-play
-                                    span #{trending.button}
-    
+                +listOfMovies(movie.image, movie.name, movie.rating, movie.quality, movie.year)
+            else
+                strong.error #{no_data}

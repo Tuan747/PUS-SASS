@@ -1,3 +1,20 @@
+$bg-color-white: #fff;
+$bg-color-main: #2f3441;
+$bg-color-dark: #1e2129;
+$bg-main-fading: #404757;
+$bg-main-sidebar: #0a0a0a;
+$text-color-white: #fff;
+$text-color-turquoise: #00acc1;
+$text-color-dark: #1e2129;
+$text-color-silver: #888;
+$border-color-turquoise: #00acc1;
+$font-size-s: 10px;
+$font-size-l: 12px;
+$font-size-xl: 14px;
+$font-size-2xl: 16px;
+$font-size-3xl: 18px;
+$font-size-4xl: 22px;
+
 @mixin d-flex($justify, $align, $decorator) {
     display: flex;
     justify-content: $justify;

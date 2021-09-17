@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
-@import "_mixings.scss";
-
-$bg-color-white: #fff;
-$bg-color-main: #2f3441;
-$bg-color-dark: #1e2129;
-$bg-main-fading: #404757;
-$bg-main-sidebar: #0a0a0a;
-
-$text-color-white: #fff;
-$text-color-turquoise: #00acc1;
-$text-color-dark: #1e2129;
-$text-color-silver: #888;
-
-$border-color-turquoise: #00acc1;
-
-$font-size-s: 10px;
-$font-size-l: 12px;
-$font-size-xl: 14px;
-$font-size-2xl: 16px;
-$font-size-3xl: 18px;
-$font-size-4xl: 22px;
+@import "_mixins.scss";
 
 body {
     margin: 0;
@@ -468,5 +448,16 @@ footer {
                 font-size: $font-size-l;
             }
         }
+    }
+}
+
+.error {
+    color: $text-color-white;
+    font-size: $font-size-4xl;
+    @include responsive(mobile) {
+        font-size: $font-size-2xl;
+    }
+    @include responsive(tablet) {
+        font-size: $font-size-3xl;
     }
 }

@@ -757,4 +757,21 @@ footer .footer-middle p {
     font-size: 12px;
   }
 }
+
+.error {
+  color: #fff;
+  font-size: 22px;
+}
+
+@media (max-width: 740px) {
+  .error {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 741px) and (max-width: 1023px) {
+  .error {
+    font-size: 18px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
