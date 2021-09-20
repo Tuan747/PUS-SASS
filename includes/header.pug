@@ -1,10 +1,10 @@
 header.header
     .container
         .row
-            .col-2.col-sm-2.col-md-2.col-lg-1.header-logo
+            .col-2.col-lg-1.header-logo
                 a(href="#", title="Sflix") 
                     img(src = `${logo}`, alt="logo-sflix")
-            label.col-2.col-sm-2.col-md-2.col-lg-1.header-browser.checkbtn(for="check")
+            label.col-2.col-lg-1.header-browser.checkbtn(for="check")
                 input#check(type="checkbox")
                 .sidebar__menu
                     ul.sidebar__menu--list
@@ -40,11 +40,11 @@ header.header
                 .header-browser__btn
                     i.fas.fa-bars
                     p #{browser}
-            .col-6.col-sm-6.col-md-6.col-lg-8.header-search
+            .col-6.col-lg-8.header-search
                 .header-search__box
                     i.fas.fa-search 
                     input(type="text", placeholder="Enter keywords...")
-            .col-2.col-sm-2.col-md-2.col-lg-2.header-author
+            .col-2.header-author
                 .header-author__box
                     i.far.fa-user
                     p #{login}
