@@ -4,7 +4,7 @@ mixin typeOfMovies(type)
 
 mixin listOfMovies(image, name, rating, quality, year)
     .col-6.col-sm-4.col-md-3.col-lg-2 
-        .trending-movies__item
+        .card-movies__item
             .movies__item--picture
                 a(href="#")
                     img(src= image, alt= name) 
@@ -21,3 +21,4 @@ mixin listOfMovies(image, name, rating, quality, year)
                     a.btn.btn-secondary.btn-block(href="#")
                         i.fas.fa-play
                         span #{trending_button}
+

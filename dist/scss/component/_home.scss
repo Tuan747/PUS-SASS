@@ -1,0 +1,74 @@
+.slide-ad {
+    margin-top: 85px;
+}
+.trending-type {
+    margin-bottom: 20px;
+    .trending-type__title {
+        border-left: 5px solid $border-color-turquoise;
+        h2 {
+            color: $text-color-white;
+            font-size: $font-size-4xl;
+            margin: 0;
+            @include responsive(mobile) {
+                font-size: $font-size-xl;
+            }
+            @include responsive(tablet) {
+                font-size: $font-size-2xl;
+            }
+        }
+    }
+    .trending-type__movies {
+        color: $text-color-white;
+        @include d-flex(flex-start, center, none);
+        i {
+            color: $text-color-turquoise;
+            font-size: $font-size-xl;
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+            }
+            @include responsive(tablet) {
+                font-size: $font-size-l;
+            }
+        }
+        h6 {
+            color: $text-color-turquoise;
+            margin: 0 20px;
+            font-weight: 100;
+            font-size: $font-size-xl;
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+                margin: 0 10px;
+            }
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+                margin: 0 15px;
+            }
+        }
+    }
+    .trending-type__tv {
+        color: $text-color-white;
+        @include d-flex(flex-start, center, none);
+        i {
+            font-size: $font-size-xl;
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+            }
+            @include responsive(tablet) {
+                font-size: $font-size-l;
+            }
+        }
+        h6 {
+            margin: 0 20px;
+            font-weight: 100;
+            font-size: $font-size-xl;
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+                margin: 0 10px;
+            }
+            @include responsive(mobile) {
+                font-size: $font-size-l;
+                margin: 0 15px;
+            }
+        }
+    }
+}

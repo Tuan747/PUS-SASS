@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
-@import "_mixins.scss";
+@import "mixins/_mixins.scss";
+@import "_variable.scss";
+@import "includes/_cardMovies.scss";
+@import "component/_home.scss";
+@import "component/_movies.scss";
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: $bg-color-dark !important;
+}
+a {
+    text-decoration: none !important;
+}
+ul {
+    list-style: none outside none;
 }
 .header {
     padding: 13px 0;
@@ -16,7 +26,7 @@ body {
     left: 0;
     right: 0;
     background: $bg-color-main;
-    .header-logo {
+    &-logo {
         a {
             display: inline-block;
             height: 34px;
@@ -27,7 +37,7 @@ body {
             }
         }
     }
-    .header-browser {
+    &-browser {
         cursor: pointer;
         background: $bg-main-fading;
         margin: 0;
@@ -67,7 +77,7 @@ body {
                 padding: 20px;
                 width: 40%;
             }
-            .sidebar__menu--list {
+            &--list {
                 list-style: none;
                 flex-wrap: wrap;
                 padding-left: 0;
@@ -83,7 +93,7 @@ body {
                     @include responsive(tablet) {
                         margin-bottom: 15px;
                     }
-                    .list-item__icon {
+                    &__icon {
                         width: 30px;
                         margin-right: 10px;
                         i {
@@ -91,7 +101,6 @@ body {
                         }
                     }
                     a {
-                        text-decoration: inherit;
                         font-size: $font-size-l;
                         font-weight: 500;
                         color: $text-color-white;
@@ -117,7 +126,7 @@ body {
                         }
                     }
                     .sidebar__genre {
-                        .sidebar__genre--list {
+                        &--list {
                             padding-left: 0;
                             .list-item--genre {
                                 margin-right: 5px;
@@ -130,7 +139,6 @@ body {
                                     padding: 4px 8px;
                                 }
                                 a {
-                                    text-decoration: inherit;
                                     font-weight: 300;
                                     font-size: $font-size-l;
                                     color: $text-color-white;
@@ -176,7 +184,7 @@ body {
         }
     }
     .header-search {
-        .header-search__box {
+        &__box {
             width: 100%;
             height: 100%;
             background: $bg-color-white;
@@ -216,7 +224,7 @@ body {
     .header-author {
         cursor: pointer;
         @include d-flex(flex-end, center, none);
-        .header-author__box {
+        &__box {
             @include d-flex(center, center, none);
             i {
                 font-size: $font-size-xl;
@@ -242,175 +250,6 @@ body {
         }
     }
 }
-.slide-ad {
-    margin-top: 85px;
-}
-.trending {
-    margin-top: 85px;
-    @include responsive(mobile) {
-        margin-top: 40px;
-    }
-    @include responsive(tablet) {
-        margin-top: 40px;
-    }
-    .trending-type {
-        margin-bottom: 20px;
-        .trending-type__title {
-            border-left: 5px solid $border-color-turquoise;
-            h2 {
-                color: $text-color-white;
-                font-size: $font-size-4xl;
-                margin: 0;
-                @include responsive(mobile) {
-                    font-size: $font-size-xl;
-                }
-                @include responsive(tablet) {
-                    font-size: $font-size-2xl;
-                }
-            }
-        }
-        .trending-type__movies {
-            color: $text-color-white;
-            @include d-flex(flex-start, center, none);
-            i {
-                color: $text-color-turquoise;
-                font-size: $font-size-xl;
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                }
-                @include responsive(tablet) {
-                    font-size: $font-size-l;
-                }
-            }
-            h6 {
-                color: $text-color-turquoise;
-                margin: 0 20px;
-                font-weight: 100;
-                font-size: $font-size-xl;
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                    margin: 0 10px;
-                }
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                    margin: 0 15px;
-                }
-            }
-        }
-        .trending-type__tv {
-            color: $text-color-white;
-            @include d-flex(flex-start, center, none);
-            i {
-                font-size: $font-size-xl;
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                }
-                @include responsive(tablet) {
-                    font-size: $font-size-l;
-                }
-            }
-            h6 {
-                margin: 0 20px;
-                font-weight: 100;
-                font-size: $font-size-xl;
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                    margin: 0 10px;
-                }
-                @include responsive(mobile) {
-                    font-size: $font-size-l;
-                    margin: 0 15px;
-                }
-            }
-        }
-    }
-    .trending-movies {
-        .trending-movies__item {
-            background: rgba(255, 255, 255, 0.05);
-            margin: 0 0.75% 30px;
-            position: relative;
-            .movies__item--picture {
-                width: 100%;
-                padding-bottom: 150%;
-                position: relative;
-                overflow: hidden;
-                border-radius: 0;
-                a {
-                    display: block;
-                    img {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-            .movies__item--detail {
-                padding: 10px;
-                @include responsive(mobile) {
-                    padding: 8px;
-                }
-                .detail-infor {
-                    color: #aaa;
-                    height: 20px;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                    .detail-infor__item:not(:last-child) {
-                        margin-right: 10px;
-                        i {
-                            color: $text-color-turquoise;
-                            position: relative;
-                            top: -1px;
-                        }
-                    }
-                    .detail-infor__item {
-                        font-size: $font-size-l;
-                        @include responsive(mobile) {
-                            font-size: $font-size-s;
-                        }
-                    }
-                }
-                .detail-name {
-                    color: $text-color-white;
-                    font-size: $font-size-xl;
-                    margin-bottom: 10px;
-                    height: 35px;
-                    overflow: hidden;
-                    cursor: pointer;
-                    @include responsive(mobile) {
-                        font-size: $font-size-l;
-                        height: 18px;
-                    }
-                    &:hover {
-                        color: $text-color-turquoise;
-                    }
-                }
-                .detail-btn {
-                    a {
-                        @include d-flex(center, center, none);
-                        i {
-                            font-size: $font-size-l;
-                            @include responsive(mobile) {
-                                font-size: $font-size-s;
-                            }
-                        }
-                        span {
-                            margin-left: 10px;
-                            font-size: $font-size-l;
-                            @include responsive(mobile) {
-                                font-size: $font-size-s;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 footer {
     padding: 20px;
     .footer-top {
@@ -418,11 +257,10 @@ footer {
         @include responsive(mobile) {
             margin-top: 0px;
         }
-        .footer-top__item {
+        &__item {
             text-align: center;
             a {
                 font-size: $font-size-2xl;
-                text-decoration: inherit;
                 color: $text-color-white;
                 @include responsive(mobile) {
                     font-size: $font-size-l;

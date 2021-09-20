@@ -1,0 +1,77 @@
+.movies {
+    .movies-type {
+        @include responsive(mobile) {
+            margin-top: 35px;
+        }
+        @include responsive(tablet) {
+            margin-top: 50px;
+        }
+        &__title {
+            border-left: 5px solid $border-color-turquoise;
+            h2 {
+                color: $text-color-white;
+                font-size: $font-size-4xl;
+                margin: 0;
+                @include responsive(mobile) {
+                    font-size: $font-size-l;
+                }
+                @include responsive(tablet) {
+                    font-size: $font-size-xl;
+                }
+            }
+        }
+        &__icon {
+            @include d-flex(flex-start, center, none);
+            a {
+                i {
+                    color: $text-color-white;
+                    font-size: $font-size-4xl;
+                    @include responsive(mobile) {
+                        font-size: $font-size-l;
+                    }
+                    @include responsive(tablet) {
+                        font-size: $font-size-xl;
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        margin: 20px 0;
+        ul {
+            @include d-flex(center, center, none);
+            li {
+                @include d-flex(center, center, none);
+                margin: 0 10px;
+                width: 50px;
+                height: 50px;
+                background: $bg-main-fading;
+                border-radius: 50%;
+                cursor: pointer;
+                @include responsive(mobile) {
+                    width: 30px;
+                    height: 30px;
+                }
+                @include responsive(tablet) {
+                    width: 50px;
+                    height: 50px;
+                }
+                a {
+                    font-size: $font-size-2xl;
+                    text-decoration: none;
+                    color: $text-color-white;
+                    @include responsive(mobile) {
+                        font-size: $font-size-l;
+                    }
+                    @include responsive(tablet) {
+                        font-size: $font-size-xl;
+                    }
+                }
+            }
+            .active {
+                background: $bg-main-turquoise;
+                font-weight: 700;
+            }
+        }
+    }
+}

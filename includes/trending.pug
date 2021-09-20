@@ -1,4 +1,4 @@
-section.trending
+section.card
     .container
         .row.trending-type
             .col-3.col-sm-3.col-md-3.col-lg-2.trending-type__title
@@ -10,7 +10,7 @@ section.trending
                 i.fas.fa-list-ul
                 h6 #{trending_typeTv}
         .row.trending-movies
-            each movie in listMovies
+            each movie in listMoviesTrending
                 +listOfMovies(movie.image, movie.name, movie.rating, movie.quality, movie.year)
             else
                 strong.error #{no_data}
