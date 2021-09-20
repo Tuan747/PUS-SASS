@@ -292,6 +292,19 @@
 }
 
 .movies .movies-type__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
   border-left: 5px solid #00acc1;
 }
 
@@ -346,6 +359,10 @@
   }
 }
 
+.movies .popular-movies {
+  margin-top: 30px;
+}
+
 .movies .pagination {
   margin: 20px 0;
 }
@@ -386,6 +403,12 @@
   background: #404757;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
+}
+
+.movies .pagination ul li:hover {
+  background: #00acc1;
 }
 
 @media (max-width: 740px) {
